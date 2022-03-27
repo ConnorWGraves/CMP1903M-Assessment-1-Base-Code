@@ -1,4 +1,4 @@
-﻿//Base code project for CMP1903M Assessment 1
+//Base code project for CMP1903M Assessment 1
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,10 +20,11 @@ namespace CMP1903M_Assessment_1_Base_Code
            
 
             //Create 'Input' object
-            var input = new Input();
+            var Input = new Input();
 
             //Get either manually entered text, or text from a file
-            var ToAnalyse = input.GetText();
+            
+            var ToAnalyse = Input.GetText();
 
             //Create an 'Analyse' object
             var analysis = new Analyse();
@@ -37,9 +38,7 @@ namespace CMP1903M_Assessment_1_Base_Code
 
 
             //Report the results of the analysis
-            Report report = new Report();
-            report.decision();
-            report.report();
+            
 
             //TO ADD: Get the frequency of individual letters?
 

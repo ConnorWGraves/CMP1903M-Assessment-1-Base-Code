@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +8,7 @@ namespace CMP1903M_Assessment_1_Base_Code
 {
     public class Input
     {
-        public void GetText()
+        public string GetText(string text, string Location)
         {
             Console.WriteLine("--------------------");
             Console.WriteLine("  Welcome to...");
@@ -16,46 +16,58 @@ namespace CMP1903M_Assessment_1_Base_Code
             Console.WriteLine("--------------------");
 
             Console.WriteLine("Would you like to input you're own text or import a .txt file \n(file/self)");
-            while(true)
+            
+            string option = Console.ReadLine();
+            string Text = "NULL";
+            if (option == "file")
+
             {
-                string option = Console.ReadLine();
-                switch (option)
+
+                Console.WriteLine("\nWhere is the file located?(\n(enter file path)");
+                while (true)
                 {
-                    case "file":
-                        Console.WriteLine("\nWhere is the file located?(\n(enter file path)");
-                        while(true)
-                        {
-                            string Location = ReadLine();
-                            if (FileStyleUriParser.Exists(location))
-                            {
-                                break;
-                            }
-                            Console.WriteLine("File not found please try again\n");
-                        }
-                        var Text = System.IO.File.ReadAllText(Location);
-                        while(false)
+                    Location = Console.ReadLine();
+                    if (File.Exists(Location))
+                    {
                         break;
-                    
-                    case "self":
-                        Console.WriteLine("Write your text here:");
-                        var Text =Console.ReadLine();
-                        while(false)
-                        break;
-                    
-                    default:
-                        Console.WriteLine("Input not recognised");
-
-                        break;
-
-                        
+                    }
+                    Console.WriteLine("File not found please try again\n");
                 }
 
+                text = System.IO.File.ReadAllText(Location);
             }
+            if (option == "self")
+            {
+
+                Console.WriteLine("Write your text here:");
+                text = Console.ReadLine();
+            }
+
+            else
+            {
+
+                Console.WriteLine("Input not recognised try again:\n");
+                text = Console.ReadLine();
+            }
+
+                   
+
+                        
+             
+
+          
             return Text;
         }
+
+        internal object GetText()
+        {
+            throw new NotImplementedException();
+        }
+
         //Handles the text input for Assessment 1
         string text = "nothing";
-        
+        private string Location;
+
         //Method: manualTextInput
         //Arguments: none
         //Returns: string

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq; 
 using System.Text;
@@ -10,12 +10,12 @@ namespace CMP1903M_Assessment_1_Base_Code
 {
     public class Analyse
     {
-       
+        
 
-        public void Analysis(string input) //Non-Static Method
+        public void Analysis(string input, string[] measurements) //Non-Static Method
         {
             var report = new Report(); //To call report later on.
-
+            
             switch (input)
             {
                 case "": //If no input found
@@ -23,8 +23,8 @@ namespace CMP1903M_Assessment_1_Base_Code
                     break; 
 
                 default:
-             
 
+                    List<string> Measurements = measurements.ToList();
                     //1. Number of sentences
                     //Calculates sentences by the amount of full stops
                     int sentence = 0;
@@ -37,6 +37,7 @@ namespace CMP1903M_Assessment_1_Base_Code
                             sentence++;
                         }
                     }
+
                     Measurements.Add("sentence", sentence);
 
 
@@ -51,7 +52,7 @@ namespace CMP1903M_Assessment_1_Base_Code
                             vowelcount++;
                         }
                     }
-                    Measurements.Add("vowelcount", vowelcount);
+                    measurements.Add("vowelcount", vowelcount);
 
 
 
@@ -65,7 +66,7 @@ namespace CMP1903M_Assessment_1_Base_Code
                             consonantcount++;
                         }
                     }
-                    Measurements.Add("consonantcount", consonantcount);
+                    measurements.Add("consonantcount"); //,consonantcount.ToString());
 
 
 
@@ -79,7 +80,7 @@ namespace CMP1903M_Assessment_1_Base_Code
                             uppercount++;
                         }
                     }
-                    Measurements.Add("uppercount", uppercount);
+                    measurements.Add("uppercount", uppercount.ToString());
 
 
 
@@ -93,7 +94,7 @@ namespace CMP1903M_Assessment_1_Base_Code
                             lowercount++;
                         }
                     }
-                    Measurements.Add("lowercount", lowercount);
+                    measurements.Add("lowercount", lowercount.ToString);
 
 
                     //6. Most Common Character
@@ -142,7 +143,8 @@ namespace CMP1903M_Assessment_1_Base_Code
 
 
                     //8. Send our list of ints and strings to Report
-                    report.decision(Measurements);
+                    
+                    report.decision(measurements);
                     break;
 
             }
@@ -150,6 +152,11 @@ namespace CMP1903M_Assessment_1_Base_Code
 
  
 
-        }      
+        }
+
+        internal object analyseText(object toAnalyse)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

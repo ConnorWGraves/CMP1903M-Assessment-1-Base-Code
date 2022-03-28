@@ -10,9 +10,14 @@ namespace CMP1903M_Assessment_1_Base_Code
     {
         string answer;
         //Handles the reporting of the analysis
-        public void decision(string Measurements)
+        public void decision(List <string> Measurements)
         {
-            Console.WriteLine(Measurements);
+            foreach(var measurement in Measurements)
+            {
+                Console.WriteLine(measurement);
+            }
+            //Console.WriteLine(Measurements);
+            Console.ReadLine();
         }
 
 

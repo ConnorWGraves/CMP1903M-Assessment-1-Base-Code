@@ -10,6 +10,7 @@ namespace CMP1903M_Assessment_1_Base_Code
     {
         public string GetText()
         {
+            //A welcoming title for the user to be welcomed wtih
             Console.WriteLine("--------------------");
             Console.WriteLine("  Welcome to...");
             Console.WriteLine("      TEXT ANALYSIS");
@@ -27,7 +28,7 @@ namespace CMP1903M_Assessment_1_Base_Code
                 while (true)
                 {
                     Location = Console.ReadLine();
-                    if (File.Exists(Location))
+                    if (File.Exists(Location)) // checking the location exsits before going forward
                     {
                         break;
                     }
@@ -38,51 +39,24 @@ namespace CMP1903M_Assessment_1_Base_Code
             }
             if (option == "self")
             {
-
+                //Collects the raw text from the user
                 Console.WriteLine("Write your text here:");
                 text = Console.ReadLine();
             }
 
-            else
-            {
+       
+                      
 
-                Console.WriteLine("Input not recognised try again:\n");
-                text = Console.ReadLine();
-            }
-
-                   
-
-                        
-             
-
-          
+          // Returns the text that it has retreieved
             return Text;
         }
 
         
-        //Handles the text input for Assessment 1
-        string text = "nothing";
-        private string Location;
+       
 
-        //Method: manualTextInput
-        //Arguments: none
-        //Returns: string
-        //Gets text input from the keyboard
-        public string manualTextInput()
-        {
+        
 
-            return text;
-        }
-
-        //Method: fileTextInput
-        //Arguments: string (the file path)
-        //Returns: string
-        //Gets text input from a .txt file
-        public string fileTextInput(string fileName)
-        {
-
-            return text;
-        }
+       
 
     }
 }

@@ -48,7 +48,7 @@ namespace CMP1903M_Assessment_1_Base_Code
                     for (int i = 0; i < input.Length; i++)
                     {
                         string vowel = input[i].ToString();
-                        if ("aeiou".Contains(vowel)) //Weirdly written backwards
+                        if ("aeiouAEIOU".Contains(vowel)) //Weirdly written backwards
                         {
                             vowelcount++;
                         }
@@ -64,7 +64,7 @@ namespace CMP1903M_Assessment_1_Base_Code
                     for (int i = 0; i < input.Length; i++)
                     {
                         string consonant = input[i].ToString();
-                        if ("bcdfghjklmnpqrstvwxyz".Contains(consonant)) //If consonant is found
+                        if ("bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ".Contains(consonant)) //If consonant is found
                         {
                             consonantcount++;
                         }

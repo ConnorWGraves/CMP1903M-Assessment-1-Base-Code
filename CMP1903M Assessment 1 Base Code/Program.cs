@@ -17,7 +17,6 @@ namespace CMP1903M_Assessment_1_Base_Code
         static void Main()
         {
             //Local list of integers to hold the first five measurements of the text
-           
 
             //Create 'Input' object
             var Input = new Input();
@@ -30,7 +29,8 @@ namespace CMP1903M_Assessment_1_Base_Code
             var analysis = new Analyse();
 
             //Pass the text input to the 'analyseText' method
-            var results = analysis.analyseText(ToAnalyse);
+            
+            analysis.analyseText(ToAnalyse);
             
 
 

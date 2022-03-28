@@ -8,7 +8,7 @@ namespace CMP1903M_Assessment_1_Base_Code
 {
     public class Input
     {
-        public string GetText(string text, string Location)
+        public string GetText()
         {
             Console.WriteLine("--------------------");
             Console.WriteLine("  Welcome to...");
@@ -59,11 +59,7 @@ namespace CMP1903M_Assessment_1_Base_Code
             return Text;
         }
 
-        internal object GetText()
-        {
-            throw new NotImplementedException();
-        }
-
+        
         //Handles the text input for Assessment 1
         string text = "nothing";
         private string Location;

@@ -10,17 +10,11 @@ namespace CMP1903M_Assessment_1_Base_Code
     {
         string answer;
         //Handles the reporting of the analysis
-        public void decision(int Measurements)
+        public void decision(string Measurements)
         {
             Console.WriteLine(Measurements);
         }
 
-        internal void decision(string[] measurements)
-        {
-            throw new NotImplementedException();
-        }
-        //Maybe have different methods for different formats of output?
-        //eg.   public void outputConsole(List<int>)
 
 
     }

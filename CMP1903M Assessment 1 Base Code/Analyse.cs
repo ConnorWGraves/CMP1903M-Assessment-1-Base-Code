@@ -37,8 +37,8 @@ namespace CMP1903M_Assessment_1_Base_Code
                             sentence++;
                         }
                     }
-
-                    Measurements.Add("sentence", sentence);
+                    string sentenceStr = ("Sentence: "+ sentence.ToString());
+                    Measurements.Add(sentenceStr);
 
 
 
@@ -52,7 +52,9 @@ namespace CMP1903M_Assessment_1_Base_Code
                             vowelcount++;
                         }
                     }
-                    measurements.Add("vowelcount", vowelcount);
+
+                    string vowelStr = ("Vowel Count: "+ vowelcount.ToString());
+                    Measurements.Add(vowelStr);
 
 
 
@@ -66,7 +68,8 @@ namespace CMP1903M_Assessment_1_Base_Code
                             consonantcount++;
                         }
                     }
-                    measurements.Add("consonantcount"); //,consonantcount.ToString());
+                    string constantStr = ("Constant count: " + consonantcount.ToString());
+                    Measurements.Add(constantStr); //,consonantcount.ToString());
 
 
 
@@ -80,7 +83,8 @@ namespace CMP1903M_Assessment_1_Base_Code
                             uppercount++;
                         }
                     }
-                    measurements.Add("uppercount", uppercount.ToString());
+                    string upperStr = ("Capital count: "+ uppercount.ToString());
+                    Measurements.Add(upperStr);
 
 
 
@@ -94,7 +98,8 @@ namespace CMP1903M_Assessment_1_Base_Code
                             lowercount++;
                         }
                     }
-                    measurements.Add("lowercount", lowercount.ToString);
+                    string lowerStr = ("Lower characters count :"+ lowercount.ToString());
+                    Measurements.Add(lowerStr);
 
 
                     //6. Most Common Character
@@ -144,7 +149,7 @@ namespace CMP1903M_Assessment_1_Base_Code
 
                     //8. Send our list of ints and strings to Report
                     
-                    report.decision(measurements);
+                    report.decision(Measurements.ToString());
                     break;
 
             }

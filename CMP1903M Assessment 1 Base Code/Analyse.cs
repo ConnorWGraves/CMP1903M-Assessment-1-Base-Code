@@ -12,7 +12,8 @@ namespace CMP1903M_Assessment_1_Base_Code
     {
         
 
-        public void Analysis(string input, string[] measurements) //Non-Static Method
+        public void analyseText(string input) //Non-Static Method
+            
         {
             var report = new Report(); //To call report later on.
             
@@ -24,7 +25,7 @@ namespace CMP1903M_Assessment_1_Base_Code
 
                 default:
 
-                    List<string> Measurements = measurements.ToList();
+                    List<string> Measurements = new();
                     //1. Number of sentences
                     //Calculates sentences by the amount of full stops
                     int sentence = 0;
@@ -37,7 +38,7 @@ namespace CMP1903M_Assessment_1_Base_Code
                             sentence++;
                         }
                     }
-                    string sentenceStr = ("Sentence: "+ sentence.ToString());
+                    string sentenceStr = (sentence.ToString());
                     Measurements.Add(sentenceStr);
 
 
@@ -149,7 +150,7 @@ namespace CMP1903M_Assessment_1_Base_Code
 
                     //8. Send our list of ints and strings to Report
                     
-                    report.decision(Measurements.ToString());
+                    report.decision(Measurements);
                     break;
 
             }
@@ -159,9 +160,6 @@ namespace CMP1903M_Assessment_1_Base_Code
 
         }
 
-        internal object analyseText(object toAnalyse)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }

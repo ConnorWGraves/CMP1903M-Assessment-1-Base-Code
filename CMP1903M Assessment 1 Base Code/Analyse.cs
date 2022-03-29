@@ -12,11 +12,10 @@ namespace CMP1903M_Assessment_1_Base_Code
     {
         
 
-        public void analyseText(string input) //Non-Static Method
+        public void analyseText(string input) 
             
         {
-            var report = new Report(); //To call report later on.
-            
+            var report = new Report(); //Creating the new instance of class ready to be worked on            
             switch (input)
             {
                 case "": //If no input found
@@ -39,7 +38,7 @@ namespace CMP1903M_Assessment_1_Base_Code
                         }
                     }
                     string sentenceStr = (sentence.ToString());
-                    Measurements.Add(sentenceStr);
+                    Measurements.Add(sentenceStr);//adds the new metric to the array
 
 
 

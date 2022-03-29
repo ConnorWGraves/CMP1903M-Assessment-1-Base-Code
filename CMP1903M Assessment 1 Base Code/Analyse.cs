@@ -33,7 +33,7 @@ namespace CMP1903M_Assessment_1_Base_Code
                     for (int i = 0; i < input.Length; i++)
                     {
                         string sentences = input[i].ToString();
-                        if (".?!".Contains(sentences)) //Weirdly written backwards
+                        if (".?!".Contains(sentences)) 
                         {
                             sentence++;
                         }
@@ -48,7 +48,7 @@ namespace CMP1903M_Assessment_1_Base_Code
                     for (int i = 0; i < input.Length; i++)
                     {
                         string vowel = input[i].ToString();
-                        if ("aeiouAEIOU".Contains(vowel)) //Weirdly written backwards
+                        if ("aeiouAEIOU".Contains(vowel)) 
                         {
                             vowelcount++;
                         }
@@ -64,13 +64,13 @@ namespace CMP1903M_Assessment_1_Base_Code
                     for (int i = 0; i < input.Length; i++)
                     {
                         string consonant = input[i].ToString();
-                        if ("bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ".Contains(consonant)) //If consonant is found
+                        if ("bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ".Contains(consonant)) //If consonant is found, lower or upper case 
                         {
                             consonantcount++;
                         }
                     }
                     string constantStr = ("Constant count: " + consonantcount.ToString());
-                    Measurements.Add(constantStr); //,consonantcount.ToString());
+                    Measurements.Add(constantStr); 
 
 
 

@@ -26,7 +26,7 @@ namespace CMP1903M_Assessment_1_Base_Code
 
                     List<string> Measurements = new();
                     //1. Number of sentences
-                    //Calculates sentences by the amount of full stops
+                    //Calculates sentences by the amount of sentence ending punctuation
                     int sentence = 0;
                   
                     for (int i = 0; i < input.Length; i++)
@@ -119,35 +119,11 @@ namespace CMP1903M_Assessment_1_Base_Code
                         }
 
                     }
-                    //Result is a char value and cannot be inserted into our int dictionary.
-                    //So we create a new dictionary are parse it into our report class.
-                    Dictionary <string, char> mcc = new(); 
-                    mcc.Add("result", result);
+                    string Mode = ("Most common character" + result);
+                    Measurements.add(Mode);
 
 
-
-                    //7. All words > 7 characters long, saved to .txt file.
-                    input = Regex.Replace(input, @"[^\w\d\s]", ""); //Removes all punctuation, no longer counted as a letter, used for error handling.
-                    string[] longest = input.Split(new[] { " " }, StringSplitOptions.None); //Creating a new string array of split words
-                    List<string> longwords = new();
-
-                    foreach (String seven in longest)
-                    {
-
-                        if (seven.Length >= 7)
-                        {
-
-                            string longword = seven;
-                            longwords.Add(longword);
-
-                        }
-
-                    }
-                    System.IO.File.WriteAllLines("Longwords.txt", longwords); //Creates Longwords.txt, sent to /bin/Debug/net6.0/
-
-
-
-                    //8. Send our list of ints and strings to Report
+                    //7. Send our list of ints and strings to Report
                     
                     report.decision(Measurements);
                     break;

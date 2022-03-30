@@ -103,7 +103,7 @@ namespace CMP1903M_Assessment_1_Base_Code
 
 
                     //6. Most Common Character
-                    int[] count = new int[128]; //Possible ASCII chars (Extended ASCII uses 256), feel free to change it.
+                    int[] count = new int[128]; //Possible ASCII chars 
                     int maximum = 0;
                     Char result = Char.MinValue; //Char is initialised with a 0.
                     Array.Clear(count, 0, count.Length); //Zeroes out all the elements.

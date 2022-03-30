@@ -42,8 +42,11 @@ namespace CMP1903M_Assessment_1_Base_Code
                 }
                 if (option == "self")
                 {
-
-                    Console.WriteLine("Write your text here:");
+                    string text = "";
+                    while (text == "")
+                    {
+                        text = Console.WriteLine("Write your text here (Make sure it isn't blank):\n");
+                    }
                     return Console.ReadLine();
                 }
 

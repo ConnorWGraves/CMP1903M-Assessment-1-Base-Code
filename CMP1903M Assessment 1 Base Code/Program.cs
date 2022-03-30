@@ -30,19 +30,7 @@ namespace CMP1903M_Assessment_1_Base_Code
 
             //Pass the text input to the 'analyseText' method
             
-            analysis.analyseText(ToAnalyse);
-            
-
-
-            //Receive a list of integers back
-
-
-            //Report the results of the analysis
-            
-
-            //TO ADD: Get the frequency of individual letters?
-
-           
+            analysis.analyseText(ToAnalyse);          
         }
         
         

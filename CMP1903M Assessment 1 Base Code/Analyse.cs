@@ -31,7 +31,7 @@ namespace CMP1903M_Assessment_1_Base_Code
                   
                     for (int i = 0; i < input.Length; i++)
                     {
-                        string sentences = input[i].ToString();
+                        string sentences = ("Sentences: " + input[i].ToString());
                         if (".?!".Contains(sentences)) 
                         {
                             sentence++;
@@ -98,7 +98,7 @@ namespace CMP1903M_Assessment_1_Base_Code
                             lowercount++;
                         }
                     }
-                    string lowerStr = ("Lower characters count :"+ lowercount.ToString());
+                    string lowerStr = ("Lower characters count: "+ lowercount.ToString());
                     Measurements.Add(lowerStr);
 
 
@@ -119,7 +119,7 @@ namespace CMP1903M_Assessment_1_Base_Code
                         }
 
                     }
-                    string Mode = ("Most common character" + result);
+                    string Mode = ("Most common character: " + result);
                     Measurements.add(Mode);
 
 
